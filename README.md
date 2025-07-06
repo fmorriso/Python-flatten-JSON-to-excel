@@ -20,4 +20,4 @@ An example of using Pandas with a custom function to flatten an arbitrary JSON s
 
 ## References
 
-* [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)
+* [Pandas to_excel()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html)
