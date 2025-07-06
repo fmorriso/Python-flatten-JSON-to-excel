@@ -59,7 +59,6 @@ def main():
         ]
     }
 
-    # flattened_data = flatten_user_orders(data)
     flattened_data = flatten_json(data)
     df = pd.DataFrame(flattened_data)
     print(df)
