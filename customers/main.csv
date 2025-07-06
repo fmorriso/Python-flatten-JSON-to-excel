@@ -1,0 +1,2 @@
+"_id","orders","user","user_email","user_name"
+"6c48811f-1107-40e5-bdab-d94026e11316","[{""id"": 101, ""amount"": 99.99}, {""id"": 102, ""amount"": 45.5}]","{""name"": ""Alice"", ""email"": ""alice@example.com""}","alice@example.com","Alice"
