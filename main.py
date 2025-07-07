@@ -74,6 +74,11 @@ def main():
 
 
 def get_required_package_names() -> list[str]:
+    """
+    read the requirements.txt file and return a sorted list of package names.
+    :return: sorted list of package names
+    :rtype: list[str
+    """
     packages: list[str] = []
     with open('requirements.txt') as f:
         for line in f:
