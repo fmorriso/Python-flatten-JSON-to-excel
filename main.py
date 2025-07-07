@@ -1,5 +1,6 @@
 import sys
 from importlib.metadata import version
+from typing import Any
 
 import pandas as pd
 
@@ -72,8 +73,27 @@ def main():
     df.to_excel("customer-orders.xlsx", index = export_index)
 
 
+def get_required_package_names() -> list[str]:
+    packages: list[str] = []
+    with open('requirements.txt') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue  # skip blank lines and comments
+            package = line.split('~')[0].strip()  # works for ~=, >=, ==, etc.
+            packages.append(package)
+
+    packages.sort()
+    return packages
+
+
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
-    print(f'pandas version: {get_package_version("pandas")}')
+    
+    package_names = get_required_package_names()
+    
+    for pkg in package_names:
+        package_name = f'{pkg}'.ljust(12)
+        print(f'{package_name}{get_package_version(pkg)}')
 
     main()
